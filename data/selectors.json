@@ -1,0 +1,10 @@
+{
+  "pageTitle": "h3",
+  "desc": "p",
+  "label": ".ant-form-item-required",
+  "name": "#name",
+  "age": "#age",
+  "story": "#story",
+  "gender": "#gender .ant-radio-wrapper",
+  "storyPh": ".ant-select-selection-placeholder"
+}
