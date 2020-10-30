@@ -11,5 +11,7 @@
   "phStory": "Type of the story",
   "genderBoy": "he",
   "genderGirl": "she",
-  "genderElse": "it"
+  "genderElse": "it",
+  "phImage": "drag and drop your image here or browse",
+  "submit": "Create!"
 }

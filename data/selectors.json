@@ -6,5 +6,8 @@
   "age": "#age",
   "story": "#story",
   "gender": "#gender .ant-radio-wrapper",
-  "storyPh": ".ant-select-selection-placeholder"
+  "phStory": ".ant-select-selection-placeholder",
+  "phImage": ".ant-upload div",
+  "submit": ".ant-btn",
+  "storyDropdown": ".rc-virtual-list-holder-inner .ant-select-item"
 }

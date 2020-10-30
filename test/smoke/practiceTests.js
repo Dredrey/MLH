@@ -82,8 +82,33 @@ describe('My Little Hero', function() {
     });
     describe('Story dropdown menu', function() {
         it('TC-017 Story placeholder = Type of the story', function() {
-            const text = $$(sel.storyPh)[0].getText();
+            const text = $$(sel.phStory)[0].getText();
             expect(text).toEqual(exp.phStory);
+        });
+    });
+    describe('Image upload', function() {
+        it('TC-018 Image upload placeholder = \'drag and drop your image here or browse\'', function() {
+            const text = $$(sel.phImage)[1].getText();
+            expect(text).toEqual(exp.phImage);
+        });
+    });
+    describe('Submit button', function(){
+        it('TC-019 Submit button is disabled if name, gender, age, and story fields are empty', function() {
+            const button = $$(sel.submit)[0].isEnabled();
+            expect(button).toEqual(false);
+        });
+        it('TC-020 Submit button is enabled if name, gender, age, and story fields are filled in', function() {
+            const setName = $$(sel.name)[0].setValue('Andrei');
+            const setGender = $$(sel.gender)[0].click();
+            const setAge = $$(sel.age)[0].setValue(18);
+            const clickStory = $$(sel.story)[0].click();
+            const setStory = $$(sel.storyDropdown)[3].click();
+            const button = $$(sel.submit)[0].isEnabled();
+            expect(button).toEqual(true);
+        });
+        it('TC-021 Submit button text = \'Create!\'', function() {
+            const text = $$(sel.submit)[0].getText();
+            expect(text).toEqual(exp.submit);
         });
     });
 });
