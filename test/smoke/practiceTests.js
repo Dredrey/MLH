@@ -85,19 +85,89 @@ describe('My Little Hero', function() {
             const text = $$(sel.phStory)[0].getText();
             expect(text).toEqual(exp.phStory);
         });
+        it('TC-018 \'Overcoming the Monster\' is a type of story', function() {
+            const clickStory = $$(sel.story)[0].click();
+            let text = '';
+            for (let i = 0; i < $$(sel.storyDropdown).length; i++){
+                if ($$(sel.storyDropdown)[i].getAttribute('title') === exp.storyChoice1){
+                    text = exp.storyChoice1;
+                }
+            }
+            expect(text).toEqual(exp.storyChoice1);
+        });
+        it('TC-019 \'Rebirth\' is a type of story', function() {
+            const clickStory = $$(sel.story)[0].click();
+            let text = '';
+            for (let i = 0; i < $$(sel.storyDropdown).length; i++){
+                if ($$(sel.storyDropdown)[i].getAttribute('title') === exp.storyChoice2){
+                    text = exp.storyChoice2;
+                }
+            }
+            expect(text).toEqual(exp.storyChoice2);
+        });
+        it('TC-020 \'Quest\' is a type of story', function() {
+            const clickStory = $$(sel.story)[0].click();
+            let text = '';
+            for (let i = 0; i < $$(sel.storyDropdown).length; i++){
+                if ($$(sel.storyDropdown)[i].getAttribute('title') === exp.storyChoice3){
+                    text = exp.storyChoice3;
+                }
+            }
+            expect(text).toEqual(exp.storyChoice3);
+        });
+        it('TC-021 \'Journey and Return\' is a type of story', function() {
+            const clickStory = $$(sel.story)[0].click();
+            let text = '';
+            for (let i = 0; i < $$(sel.storyDropdown).length; i++){
+                if ($$(sel.storyDropdown)[i].getAttribute('title') === exp.storyChoice4){
+                    text = exp.storyChoice4;
+                }
+            }
+            expect(text).toEqual(exp.storyChoice4);
+        });
+        it('TC-022 \'Rags and Riches\' is a type of story', function() {
+            const clickStory = $$(sel.story)[0].click();
+            let text = '';
+            for (let i = 0; i < $$(sel.storyDropdown).length; i++){
+                if ($$(sel.storyDropdown)[i].getAttribute('title') === exp.storyChoice5){
+                    text = exp.storyChoice5;
+                }
+            }
+            expect(text).toEqual(exp.storyChoice5);
+        });
+        it('TC-023 \'Tragedy\' is a type of story', function() {
+            const clickStory = $$(sel.story)[0].click();
+            let text = '';
+            for (let i = 0; i < $$(sel.storyDropdown).length; i++){
+                if ($$(sel.storyDropdown)[i].getAttribute('title') === exp.storyChoice6){
+                    text = exp.storyChoice6;
+                }
+            }
+            expect(text).toEqual(exp.storyChoice6);
+        });
+        it('TC-024 \'Comedy\' is a type of story', function() {
+            const clickStory = $$(sel.story)[0].click();
+            let text = '';
+            for (let i = 0; i < $$(sel.storyDropdown).length; i++){
+                if ($$(sel.storyDropdown)[i].getAttribute('title') === exp.storyChoice7){
+                    text = exp.storyChoice7;
+                }
+            }
+            expect(text).toEqual(exp.storyChoice7);
+        });
     });
     describe('Image upload', function() {
-        it('TC-018 Image upload placeholder = \'drag and drop your image here or browse\'', function() {
+        it('TC-025 Image upload placeholder = \'drag and drop your image here or browse\'', function() {
             const text = $$(sel.phImage)[1].getText();
             expect(text).toEqual(exp.phImage);
         });
     });
     describe('Submit button', function(){
-        it('TC-019 Submit button is disabled if name, gender, age, and story fields are empty', function() {
+        it('TC-026 Submit button is disabled if name, gender, age, and story fields are empty', function() {
             const button = $$(sel.submit)[0].isEnabled();
             expect(button).toEqual(false);
         });
-        it('TC-020 Submit button is enabled if name, gender, age, and story fields are filled in', function() {
+        it('TC-027 Submit button is enabled if name, gender, age, and story fields are filled in', function() {
             const setName = $$(sel.name)[0].setValue('Andrei');
             const setGender = $$(sel.gender)[0].click();
             const setAge = $$(sel.age)[0].setValue(18);
@@ -106,7 +176,7 @@ describe('My Little Hero', function() {
             const button = $$(sel.submit)[0].isEnabled();
             expect(button).toEqual(true);
         });
-        it('TC-021 Submit button text = \'Create!\'', function() {
+        it('TC-028 Submit button text = \'Create!\'', function() {
             const text = $$(sel.submit)[0].getText();
             expect(text).toEqual(exp.submit);
         });

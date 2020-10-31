@@ -13,5 +13,13 @@
   "genderGirl": "she",
   "genderElse": "it",
   "phImage": "drag and drop your image here or browse",
-  "submit": "Create!"
+  "submit": "Create!",
+  "storyChoice1": "Overcoming the Monster",
+  "storyChoice2": "Rebirth",
+  "storyChoice3": "Quest",
+  "storyChoice4": "Journey and Return",
+  "storyChoice5": "Rags and Riches",
+  "storyChoice6": "Tragedy",
+  "storyChoice7": "Comedy"
+
 }
