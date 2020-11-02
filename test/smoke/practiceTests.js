@@ -81,12 +81,12 @@ describe('My Little Hero', function() {
        });
     });
     describe('Story dropdown menu', function() {
-        it('TC-017 Story placeholder = Type of the story', function() {
+        it('TC-017 Story placeholder = \'Type of the story\'', function() {
             const text = $$(sel.phStory)[0].getText();
             expect(text).toEqual(exp.phStory);
         });
         it('TC-018 \'Overcoming the Monster\' is a type of story', function() {
-            const clickStory = $$(sel.story)[0].click();
+            $$(sel.story)[0].click(); //opens story dropdown
             let text = '';
             for (let i = 0; i < $$(sel.storyDropdown).length; i++){
                 if ($$(sel.storyDropdown)[i].getAttribute('title') === exp.storyChoice1){
@@ -96,7 +96,7 @@ describe('My Little Hero', function() {
             expect(text).toEqual(exp.storyChoice1);
         });
         it('TC-019 \'Rebirth\' is a type of story', function() {
-            const clickStory = $$(sel.story)[0].click();
+            $$(sel.story)[0].click(); //opens story dropdown
             let text = '';
             for (let i = 0; i < $$(sel.storyDropdown).length; i++){
                 if ($$(sel.storyDropdown)[i].getAttribute('title') === exp.storyChoice2){
@@ -106,7 +106,7 @@ describe('My Little Hero', function() {
             expect(text).toEqual(exp.storyChoice2);
         });
         it('TC-020 \'Quest\' is a type of story', function() {
-            const clickStory = $$(sel.story)[0].click();
+            $$(sel.story)[0].click(); //opens story dropdown
             let text = '';
             for (let i = 0; i < $$(sel.storyDropdown).length; i++){
                 if ($$(sel.storyDropdown)[i].getAttribute('title') === exp.storyChoice3){
@@ -116,7 +116,7 @@ describe('My Little Hero', function() {
             expect(text).toEqual(exp.storyChoice3);
         });
         it('TC-021 \'Journey and Return\' is a type of story', function() {
-            const clickStory = $$(sel.story)[0].click();
+            $$(sel.story)[0].click(); //opens story dropdown
             let text = '';
             for (let i = 0; i < $$(sel.storyDropdown).length; i++){
                 if ($$(sel.storyDropdown)[i].getAttribute('title') === exp.storyChoice4){
@@ -126,7 +126,7 @@ describe('My Little Hero', function() {
             expect(text).toEqual(exp.storyChoice4);
         });
         it('TC-022 \'Rags and Riches\' is a type of story', function() {
-            const clickStory = $$(sel.story)[0].click();
+            $$(sel.story)[0].click(); //opens story dropdown
             let text = '';
             for (let i = 0; i < $$(sel.storyDropdown).length; i++){
                 if ($$(sel.storyDropdown)[i].getAttribute('title') === exp.storyChoice5){
@@ -136,7 +136,7 @@ describe('My Little Hero', function() {
             expect(text).toEqual(exp.storyChoice5);
         });
         it('TC-023 \'Tragedy\' is a type of story', function() {
-            const clickStory = $$(sel.story)[0].click();
+            $$(sel.story)[0].click();
             let text = '';
             for (let i = 0; i < $$(sel.storyDropdown).length; i++){
                 if ($$(sel.storyDropdown)[i].getAttribute('title') === exp.storyChoice6){
@@ -146,7 +146,7 @@ describe('My Little Hero', function() {
             expect(text).toEqual(exp.storyChoice6);
         });
         it('TC-024 \'Comedy\' is a type of story', function() {
-            const clickStory = $$(sel.story)[0].click();
+            $$(sel.story)[0].click();
             let text = '';
             for (let i = 0; i < $$(sel.storyDropdown).length; i++){
                 if ($$(sel.storyDropdown)[i].getAttribute('title') === exp.storyChoice7){
@@ -168,11 +168,11 @@ describe('My Little Hero', function() {
             expect(button).toEqual(false);
         });
         it('TC-027 Submit button is enabled if name, gender, age, and story fields are filled in', function() {
-            const setName = $$(sel.name)[0].setValue('Andrei');
-            const setGender = $$(sel.gender)[0].click();
-            const setAge = $$(sel.age)[0].setValue(18);
-            const clickStory = $$(sel.story)[0].click();
-            const setStory = $$(sel.storyDropdown)[3].click();
+            $$(sel.name)[0].setValue('Andrei'); //sets name to "Andrei"
+            $$(sel.gender)[0].click(); //sets gender to "he"
+            $$(sel.age)[0].setValue(18); //sets age to 18
+            $$(sel.story)[0].click(); //opens the dropdown for the story
+            $$(sel.storyDropdown)[3].click(); //chooses the "Journey and Return" story
             const button = $$(sel.submit)[0].isEnabled();
             expect(button).toEqual(true);
         });
