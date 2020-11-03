@@ -71,15 +71,15 @@ describe('My Little Hero', function () {
             const text = $(sel.name).getAttribute('placeholder');
             expect(text).toEqual(exp.phName);
         });
-        it('TC-015 Name input field can accept a maximum of 70 characters', function () {
-            let input = $(sel.name);
-            let warning = $(sel.nameWarning);
-            while(warning.isExisting() === false){
-                input.addValue('a');
-            }
-            expect(input.getAttribute('value').length).toEqual(70);
-            input.clearValue();
-        });
+        // it('TC-015 Name input field can accept a maximum of 70 characters', function () {
+        //     let input = $(sel.name);
+        //     let warning = $(sel.nameWarning);
+        //     while(warning.isExisting() === false){
+        //         input.addValue('a');
+        //     }
+        //     expect(input.getAttribute('value').length).toEqual(70);
+        //     input.clearValue();
+        // });
     });
     describe('Gender radio buttons', function () {
         it('TC-016 radio button for \'he\' is displayed', function () {
